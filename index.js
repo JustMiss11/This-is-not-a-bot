@@ -16,6 +16,11 @@ This.on("ready", () => {
       console.log("Made by JustNela (FEDE)");
 })
 
+This.on("mention", (message) => {
+      message.channel.send("My prefix is `+`");
+      return;
+})
+
 This.on("message", async (message, msg) => {
       let prf = "+";
       let messageArray = message.content.split(" "),
@@ -43,6 +48,7 @@ This.on("message", async (message, msg) => {
             ],
             "color": 0x36393f
       }})
+      return;
       
 })
 
