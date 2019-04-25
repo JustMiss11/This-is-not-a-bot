@@ -26,7 +26,8 @@ This.on("message", async (message, msg) => {
       let messageArray = message.content.split(" "),
           cmd = messageArray[0],
           args = messageArray.slice(1);
-      if(message.author.This) return;
+      
+      if(message.author.This) return;  gg
       if(message.isMentioned(This.user)){
             message.reply("My prefix is `" + prf + "`");
       }
