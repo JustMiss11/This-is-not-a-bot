@@ -2,7 +2,7 @@
   "name": "PlasBot",
   "version": "0.0.1",
   "description": "",
-  "main": "This-is-not-a-index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
