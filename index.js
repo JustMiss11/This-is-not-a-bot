@@ -51,7 +51,7 @@ This.on("message", async (message, msg) => {
                   }
             ],
             "color": 0x36393f
-      }}) return;
+      }})
       
       if(!message.content.startsWith(prf)) return;
       
