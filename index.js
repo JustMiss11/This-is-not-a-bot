@@ -27,17 +27,19 @@ This.on("message", async (message, msg) => {
           cmd = messageArray[0],
           args = messageArray.slice(1);
       
-      if(message.author.This) return;  gg
+      if(!message.content.startsWith(prf)) return;
+      if(message.author.This) return;  
       if(message.isMentioned(This.user)){
             message.reply("My prefix is `" + prf + "`");
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type === "dm") return message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
-            "author": {
+      if(message.channel.type === "dm"){
+            message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
+                "author": {
                   "name": "Someone DMed to me"
-            },
-            "fields": [
+                },
+                "fields": [
                   {
                         "name": "User:",
                         "value": message.author.username
@@ -50,11 +52,12 @@ This.on("message", async (message, msg) => {
                         "name": "content",
                         "value": message.content
                   }
-            ],
-            "color": 0x36393f
-      }})
+                ],
+                "color": 0x36393f
+          }})
+      } return;
       
-      if(!message.content.startsWith(prf)) return;
+     // if(!message.content.startsWith(prf)) return;
       
       if(cmd === `${prf}help`){
             var emb = new disc.RichEmbed()
