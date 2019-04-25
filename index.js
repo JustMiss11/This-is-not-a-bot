@@ -16,10 +16,10 @@ This.on("ready", () => {
       console.log("Made by JustNela (FEDE)");
 })
 
-This.on("mention", (message) => {
-      message.channel.send("My prefix is `+`");
-      return;
-})
+
+   
+      
+
 
 This.on("message", async (message, msg) => {
       let prf = "+";
@@ -27,6 +27,10 @@ This.on("message", async (message, msg) => {
           cmd = messageArray[0],
           args = messageArray.slice(1);
       
+      if(message.isMentioned(This.user)){
+            message.reply("My prefix is `+`");
+      }
+            
       if(!message.content.startsWith(prf)) return;
       if(message.channel.type = "dm") return message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
             "author": {
@@ -50,6 +54,15 @@ This.on("message", async (message, msg) => {
       }})
       return;
       
+      if(cmd === `${prf}help`){
+            var emb = new disc.RichEmbed()
+            .setTitle("This is not a help")
+            .setColor("0x36393f")
+            .setTimestamp()
+            .setDescription("`help` - Viewing.");
+            message.channel.send(emb)
+            return;
+      }
 })
 
 This.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJkhNLUcbMHIKAf02diLzsg0");
