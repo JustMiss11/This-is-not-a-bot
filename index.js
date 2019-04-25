@@ -34,7 +34,7 @@ This.on("message", async (message, msg) => {
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type === "dm") return; {
+      if(message.channel.type !=== "guild") return; {
             message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
