@@ -28,7 +28,7 @@ This.on("message", async (message, msg) => {
           args = messageArray.slice(1);
       
       if(message.isMentioned(This.user)){
-            message.reply("My prefix is `" + ${prf}"`");
+            message.reply("My prefix is `" + prf + "`");
       }
             
       //if(!message.content.startsWith(prf)) return;
