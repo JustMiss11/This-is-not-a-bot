@@ -34,7 +34,7 @@ This.on("message", async (message, msg) => {
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type === "dm"){
+      if(message.channel.type === "dm") return; {
             message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
@@ -55,7 +55,7 @@ This.on("message", async (message, msg) => {
                 ],
                 "color": 0x36393f
           }})
-      } return;
+      };
       
      // if(!message.content.startsWith(prf)) return;
       
