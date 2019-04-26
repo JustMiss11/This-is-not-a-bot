@@ -5,9 +5,13 @@ const Discord = require('discord.js'),
       
 const server = new Discord.Client();
 
+const bname = server.username,
+      bid = server.user.id,
+      btag = server.user.discriminator;
+
 //let c = console;
 
-This.on("ready", () => {
+server.on("ready", () => {
       console.log(server.user.username)
       console.log(`is in ${server.guilds.size} servers`)
       console.log(`with ${server.users.size} users`)
@@ -21,7 +25,7 @@ This.on("ready", () => {
       
 
 
-This.on("message", async (message, msg) => {
+server.on("message", async (message, msg) => {
       let prf = "+";
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
