@@ -35,7 +35,7 @@ This.on("message", async (message, msg) => {
             
       //if(!message.content.startsWith(prf)) return;
       if(!message.guild.channel) return; {
-            message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
+            message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
                 },
@@ -70,4 +70,4 @@ This.on("message", async (message, msg) => {
       }
 })
 
-This.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJkhNLUcbMHIKAf02diLzsg0");
+server.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJkhNLUcbMHIKAf02diLzsg0");
