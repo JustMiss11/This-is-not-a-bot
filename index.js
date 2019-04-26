@@ -38,7 +38,7 @@ server.on("message", async (message, msg) => { //reload;
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type !== "text"){
+      if(message.channel.type !== "text") return; {
             message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
@@ -59,7 +59,7 @@ server.on("message", async (message, msg) => { //reload;
                 ],
                 "color": 0x36393f
           }}) 
-      } return;
+      };
       
      // if(!message.content.startsWith(prf)) return;
       
