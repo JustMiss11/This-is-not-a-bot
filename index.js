@@ -6,8 +6,8 @@ const Discord = require('discord.js'),
 const server = new Discord.Client();
 
 const bname = server.username,
-      bid = server.user.id,
-      btag = server.user.discriminator;
+      bid = server.id;
+    
 
 //let c = console;
 
