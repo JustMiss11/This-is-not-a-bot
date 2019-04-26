@@ -25,7 +25,7 @@ server.on("ready", () => {
       
 
 
-server.on("message", async (message, msg) => {
+server.on("message", async (message, msg) => { //reload;
       let prf = "+";
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
