@@ -23,9 +23,9 @@ This.on("ready", () => {
 
 This.on("message", async (message, msg) => {
       let prf = "+";
-      let messageArray = message.content.split(" "),
-          cmd = messageArray[0],
-          args = messageArray.slice(1);
+      let messageArray = message.content.split(" ");
+      let cmd = messageArray[0];
+      let args = messageArray.slice(1);
       
       if(!message.content.startsWith(prf)) return;
       if(message.author.This) return;  
@@ -34,7 +34,7 @@ This.on("message", async (message, msg) => {
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type == "dm") return; {
+      if(!message.channel.guild) return; {
             message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
