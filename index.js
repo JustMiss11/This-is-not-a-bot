@@ -3,15 +3,15 @@ const Discord = require('discord.js'),
       disc = require('discord.js'),
       Disc = require('discord.js');
       
-const This = new Discord.Client();
+const server = new Discord.Client();
 
 //let c = console;
 
 This.on("ready", () => {
-      console.log(This.user.username)
-      console.log(`is in ${This.guilds.size} servers`)
-      console.log(`with ${This.users.size} users`)
-      console.log(`${This.user.username} is online!`)
+      console.log(server.user.username)
+      console.log(`is in ${server.guilds.size} servers`)
+      console.log(`with ${server.users.size} users`)
+      console.log(`${server.user.username} is online!`)
       console.log("---------------------------------")
       console.log("Made by JustNela (FEDE)");
 })
@@ -28,13 +28,13 @@ This.on("message", async (message, msg) => {
       let args = messageArray.slice(1);
       
       if(!message.content.startsWith(prf)) return;
-      if(message.author.This) return;  
-      if(message.isMentioned(This.user)){
+      if(message.author.server) return;  
+      if(message.isMentioned(server.user)){
             message.reply("My prefix is `" + prf + "`");
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(!message.channel.guild) return; {
+      if(!message.guild.channel) return; {
             message.reply("It wont work in DM's dummy..") && This.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
