@@ -38,28 +38,28 @@ server.on("message", async (message, msg) => { //reload;
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type !== "text") return; {
-            message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
-                "author": {
-                  "name": "Someone DMed to me"
-                },
-                "fields": [
-                  {
-                        "name": "User:",
-                        "value": message.author.username
-                  },
-                  {
-                        "name": "ID",
-                        "value": message.author.id
-                  },
-                  {
-                        "name": "content",
-                        "value": message.content
-                  }
-                ],
-                "color": 0x36393f
-          }}) 
-      };
+      if(message.channel.type === "dm") return;
+          //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
+               // "author": {
+              //   /"name": "Someone DMed to me"
+              //  },
+              //  "fields": [
+                //  )){
+                     //   "name": "User:",
+                  //      "value": message.author.username
+                 // },
+                  //{
+                //        "name": "ID",
+                //        "value": message.author.id
+               //   },
+                //  {
+                 //       "name": "content",
+                  //      "value": message.content
+               //   }
+             //   ],
+              //  "color": 0x36393f
+         // }}) 
+    //  };
       
      // if(!message.content.startsWith(prf)) return;
       
