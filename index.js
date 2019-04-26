@@ -38,7 +38,7 @@ server.on("message", async (message, msg) => {
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(!message.guild) return; {
+      if(message.channel === "DMChannel") return; {
             message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
                 "author": {
                   "name": "Someone DMed to me"
