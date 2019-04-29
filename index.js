@@ -1,13 +1,34 @@
 const Discord = require('discord.js'),
       discord = require('discord.js'),
       disc = require('discord.js'),
-      Disc = require('discord.js');
+      Disc = require('discord.js'),
+      fs = require('fs'),
+      colors = require('./colors.json');
       
 const server = new Discord.Client();
 
 const bname = server.username,
       bid = server.id;
-    
+
+server.commands = new Discord.Collection();
+
+fs.readdir("./commands/", (err, files) => {
+
+  if(err) console.log(err);
+
+  let jsfile = files.filter(f => f.split(".").pop() === "js")
+  if(jsfile.length <= 0){
+    console.log("Couldn't find commands.");
+    return;
+  }
+
+  jsfile.forEach((f, i) =>{
+    let props = require(`./commands/${f}`);
+    console.log(`${f} loaded!`);
+    bot.commands.set(props.help.name, props);
+  });
+
+});
 
 //let c = console;
 
@@ -30,6 +51,10 @@ server.on("message", async (message, msg) => { //reload;
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
+      
+      let commandfile = server.commands.get(cmd.slice(prf.length));
+      if(commandfile) commandfile.run(server,message,args);
+
       
       if(!message.content.startsWith(prf)) return;
       if(message.author.server) return;  
