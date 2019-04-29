@@ -1,7 +1,7 @@
 const discord = require('discord.js');
 
 module.exports.run = async (server, message, args) => {
-  var emb = new disc.RichEmbed()
+  var emb = new discord.RichEmbed()
             .setTitle("This is not a help")
             .setColor("0x36393f")
             .setTimestamp()
