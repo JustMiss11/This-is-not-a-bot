@@ -98,10 +98,10 @@ server.on("message", async (message, msg) => { //reload;
            // message.channel.send(emb)
            // return;
      // }
-      if(cmd === `${prf}say`){
-            message.channel.send(args.join(" "));
-            return;
-      }
+      //if(cmd === `${prf}say`){
+            //message.channel.send(args.join(" "));
+           // return;
+      //}
 })
 
 server.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJkhNLUcbMHIKAf02diLzsg0");
