@@ -11,7 +11,7 @@ module.exports.run = async (server, message, args) => {
   .setAuthor(message.author.username)
   .setTitle("Reported bug")
   .addField("User reporting bug:", user)
-  .addField("Bug:", reason)
+  .addField("Bug:", bug)
   .setColor(colors.disc);
   server.channels.get('572892675553099801').send(remb);
   return;
