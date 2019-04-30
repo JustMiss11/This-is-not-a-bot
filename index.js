@@ -51,7 +51,7 @@ server.on("message", async (message, msg) => { //reload;
       
       
       let pref = db.fetch(`inv_${message.guild.id}`);             // prf = "+";
-      if(!pref) pref = "+";
+     // if(!pref) pref = "+";
       
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
@@ -61,13 +61,13 @@ server.on("message", async (message, msg) => { //reload;
       if(!message.content.startsWith(`${pref ? `${pref}` : '+'}`)) return;
       if(message.author.server) return;  
       if(message.isMentioned(server.user)){
-            message.reply("My prefix is `" + pref + "`");
+            message.reply("My prefix is `" + `${pref ? `${pref}` : '+'}` + "`");
       }
             
       //if(!message.content.startsWith(prf)) return;
       if(message.channel.type === "dm") return server.channels.get("571024698209599488").send(`User **${message.author.username} DMed me this: \`${message.content}\``);
       
-      let commandfile = server.commands.get(cmd.slice(pref.length));
+      let commandfile = server.commands.get(cmd.slice(`${pref ? `${pref}` : '+'}`.length));
       if(commandfile) commandfile.run(server,message,args);
 
       //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
