@@ -12,7 +12,7 @@ module.exports.run = async (server, message, args) => {
   
   var semb = new Discord.RichEmbed()
   .setAuthor("Succesful!")
-  .setDescription(`You have succesfully changed server prefix to ${prf}!`)
+  .setDescription(`You have succesfully changed server prefix to **`${prf}`**!`)
   .setColor("GREEN");
   message.channel.send(semb)
   
