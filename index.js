@@ -52,9 +52,6 @@ server.on("message", async (message, msg) => { //reload;
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
       
-      let commandfile = server.commands.get(cmd.slice(prf.length));
-      if(commandfile) commandfile.run(server,message,args);
-
       
       if(!message.content.startsWith(prf)) return;
       if(message.author.server) return;  
@@ -62,9 +59,13 @@ server.on("message", async (message, msg) => { //reload;
             message.reply("My prefix is `" + prf + "`");
       }
             
-      if(!message.content.startsWith(prf)) return;
+      //if(!message.content.startsWith(prf)) return;
       if(message.channel.type === "dm") return server.channels.get("571024698209599488").send(`User **${message.author.username} DMed me this: \`${message.content}\``);
-          //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
+      
+      let commandfile = server.commands.get(cmd.slice(prf.length));
+      if(commandfile) commandfile.run(server,message,args);
+
+      //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
                // "author": {
               //   /"name": "Someone DMed to me"
               //  },
