@@ -51,7 +51,7 @@ server.on("message", async (message, msg) => { //reload;
       
       
       let pref = db.fetch(`inv_${message.guild.id}`);             // prf = "+";
-      //if(!prf) prf = "+";
+      if(!pref) pref = "+";
       
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
