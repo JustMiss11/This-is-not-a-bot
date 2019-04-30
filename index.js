@@ -3,6 +3,7 @@ const Discord = require('discord.js'),
       disc = require('discord.js'),
       Disc = require('discord.js'),
       fs = require('fs'),
+      db = require('quick.db'),
       colors = require('./colors.json');
       
 const server = new Discord.Client();
@@ -47,7 +48,11 @@ server.on("ready", () => {
 
 
 server.on("message", async (message, msg) => { //reload;
-      let prf = "+";
+      
+      
+      let prf = db.fetch(`inv_${message.guild.id}`);             // prf = "+";
+      if(!prf) prf = "+";
+      
       let messageArray = message.content.split(" ");
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
