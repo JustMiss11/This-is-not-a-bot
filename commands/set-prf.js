@@ -18,6 +18,6 @@ module.exports.run = async (server, message, args) => {
   
 }
 
-module.exports.run = {
+module.exports.help = {
  "name": "set-prefix"
 }
