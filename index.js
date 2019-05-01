@@ -70,7 +70,7 @@ server.on("message", async (message, msg) => { //reload;
       let commandfile = server.commands.get(cmd.slice(`${pref ? `${pref}` : '+'}`.length));
       if(commandfile) commandfile.run(server,message,args);
 
-      if(message.content === "discord.gg" || message.content === "discord.me"){
+      if(message.content.startsWith("https://www.discord.gg") || message.content.startsWith("https://www.discord.me")){
             message.delete()//.then(() => {
               // message.reply(`Dont poste any links here!`)
             //message.delete()
