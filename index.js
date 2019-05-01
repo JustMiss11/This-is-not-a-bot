@@ -71,8 +71,11 @@ server.on("message", async (message, msg) => { //reload;
       if(commandfile) commandfile.run(server,message,args);
 
       if(message.content === "discord.gg" || message.content === "discord.me"){
-            message.reply(`Dont poste any links here!`)
-            message.delete()
+            message.delete().then(() => {
+              await message.reply(`Dont poste any links here!`)
+            //message.delete()
+            
+            })
             return;
       }
       //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
