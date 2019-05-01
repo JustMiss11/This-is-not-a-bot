@@ -72,7 +72,7 @@ server.on("message", async (message, msg) => { //reload;
 
       if(message.content === "discord.gg" || message.content === "discord.me"){
             message.delete().then(() => {
-              await message.reply(`Dont poste any links here!`)
+               message.reply(`Dont poste any links here!`)
             //message.delete()
             
             })
