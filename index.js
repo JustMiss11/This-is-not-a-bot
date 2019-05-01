@@ -70,14 +70,14 @@ server.on("message", async (message, msg) => { //reload;
       let commandfile = server.commands.get(cmd.slice(`${pref ? `${pref}` : '+'}`.length));
       if(commandfile) commandfile.run(server,message,args);
 
-      if(message.content.startsWith("https://www.discord.gg") || message.content.startsWith("https://www.discord.me")){
-            message.delete()//.then(() => {
+      if(message.content.startsWith("https://www.discord.gg") || message.content.startsWith("https://www.discord.me"))return message.delete() && message.reply("Dont poste discord links here!");
+          //  message.delete()//.then(() => {
               // message.reply(`Dont poste any links here!`)
             //message.delete()
             
            // })
-            return;
-      }
+          //  return;
+   //   }
       //  message.reply("It wont work in DM's dummy..") && server.channels.get("571024698209599488").send({embed:{
                // "author": {
               //   /"name": "Someone DMed to me"
