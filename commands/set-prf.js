@@ -19,6 +19,6 @@ module.exports.run = async (server, message, args) => {
 }
 
 module.exports.help = {
- "name": "set-prefix"
+ "name": "set-prefix",
  "aliases": ['set-prf', 'prf', 'prefix']
 }
