@@ -5,5 +5,6 @@ module.exports.run = async (bot, message, args) => {
     return;
 }
 module.exports.help = {
-    name: "say"
+    name: "say",
+    aliases: []
 }
