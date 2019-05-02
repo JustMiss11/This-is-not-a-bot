@@ -12,7 +12,7 @@ module.exports.run = (server, message, args) => {
     if (collected.first().content === 'cancel') {
       return message.reply("Canceled.");
     }
-    message.channel.send(`<@${cont.id}>`)
+    message.channel.send(`${cont.tag}`)
     return;
   }).catch(err => {
     message.reply("Cancelled...").then(r => r.delete(5000));
