@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 
 module.exports.run = (server, message, args) => {
-  let cont = message.mentions.users.first();
+  let cont = message.mentions.members.first();
+  
   const filter = m => m.author.id === message.author.id;
   message.reply("Please tag a user to test... Will expire in 10 seconds...").then(q => q.delete(10000))
   message.channel.awaitMessages(filter, {
@@ -9,7 +10,7 @@ module.exports.run = (server, message, args) => {
     time: 10000
   }).then(collected => {
     collected.delete(15000);
-    if (collected.first().content === 'cancel') {
+    if (collected.first().content === 'Cancel') {
       return message.reply("Canceled.");
     }
     message.channel.send(`User is clear!`)
@@ -21,5 +22,6 @@ module.exports.run = (server, message, args) => {
   });
 }
 module.exports.help = {
-  name: "test"
+  name: "test",
+  aliases: ['t', 'tt']
 }
