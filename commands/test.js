@@ -13,9 +13,11 @@ module.exports.run = (server, message, args) => {
       return message.reply("Canceled.");
     }
     message.channel.send(`<@${cont.id}>`)
+    return;
   }).catch(err => {
     message.reply("Cancelled...").then(r => r.delete(5000));
     message.channel.send("Time exceeded. Message await cancelled.").then(w => w.delete(5000));
+    console.log(err); 
   });
 }
 module.exports.help = {
