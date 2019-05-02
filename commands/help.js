@@ -13,5 +13,6 @@ module.exports.run = async (server, message, args) => {
   return;
 }
 module.exports.help = {
-  name: "help"
+  name: "help",
+  aliases: ['h', 'halp']
 }
