@@ -43,8 +43,8 @@ server.on("ready", () => {
 
     setInterval(function() {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
-        bot.user.setActivity(status, {type: "WATCHING"});
-        bot.user.setStatus("idle"); //online, idle, dnd
+        server.user.setActivity(status, {type: "WATCHING"});
+        server.user.setStatus("idle"); //online, idle, dnd
     }, 5000)
 })
 
