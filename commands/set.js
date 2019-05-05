@@ -25,7 +25,7 @@ module.exports.run = async (server, message, args) => {
         var emb = new Discord.RichEmbed()
         .setAuthor("Succesful!", message.author.avatarURL)
         .setColor("GREEN")
-        .setDescription("I have set reports channel for this guild to `" + ${channl} + "`!");
+        .setDescription(`I have set reports channel for this guild to \`${channl}\`!`);
         message.channel.send(emb)
         return;
   }
