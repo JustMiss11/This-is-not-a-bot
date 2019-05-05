@@ -32,6 +32,20 @@ server.on("ready", () => {
       console.log(`${server.user.username} is online!`)
       console.log("---------------------------------")
       console.log("Made by JustNela (FEDE)");
+      
+      let statuses = [
+          `to ${server.guilds.size} servers!`, //shows in how many servers I am!
+          "my prefix is +", //my Prefix!
+          "start with +help", //simple help!
+          "Version: 0.0.1!", //Bots version!
+          `over ${server.users.size} users!` //shows how many users im managing!
+       ]
+
+    setInterval(function() {
+        let status = statuses[Math.floor(Math.random() * statuses.length)];
+        bot.user.setActivity(status, {type: "WATCHING"});
+        bot.user.setStatus("idle"); //online, idle, dnd
+    }, 5000)
 })
 
 
