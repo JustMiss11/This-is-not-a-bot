@@ -72,7 +72,7 @@ server.on("message", async (message, msg) => { //reload;
       }
             
       //if(!message.content.startsWith(prf)) return;
-      if(message.channel.type === "dm") return server.channels.get("571024698209599488").send(`User **${message.author.username} DMed me this: \`${message.content}\``);
+      if(message.channel.type === "dm") return server.channels.get("571024698209599488").send(`User **${message.author.username}** DMed me this: \`${message.content}\``);
       
       let commandfile = server.commands.get(cmd.slice(`${pref ? `${pref}` : '+'}`.length));
       if(commandfile) commandfile.run(server,message,args);
