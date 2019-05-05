@@ -68,6 +68,7 @@ server.on("message", async (message, msg) => { //reload;
       if(message.author.server) return;  
       if(message.isMentioned(server.user)){
             message.reply("My prefix is `" + `${pref ? `${pref}` : '+'}` + "`");
+            return;
       }
             
       //if(!message.content.startsWith(prf)) return;
