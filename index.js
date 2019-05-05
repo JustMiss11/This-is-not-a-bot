@@ -19,9 +19,7 @@ fs.readdir('./commands/', (err, files) => {
         let props = require(`./commands/${ f }`);
         props.fileName = f;
         server.commands.set(props.help.name, props);
-        props.help.aliases.forEach(alias => {
-            server.aliases.set(alias, props.help.name);
-        });
+        
     });
 });
 
