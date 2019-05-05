@@ -6,7 +6,7 @@ module.exports.run = async (server, message, args) => {
     message.channel.send("Preparing.");
   }else{
     message.channel.send({embed: {
-      "color": colors.disc,
+      "color": 0x36393f,
       "description": "[Join now!](https://discord.gg/n9U6nAH)"
     }})
   }
