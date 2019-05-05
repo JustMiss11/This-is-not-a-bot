@@ -6,7 +6,7 @@ module.exports.run = async (server, message, args) => {
   .setColor("0x36393f")
   .setTimestamp()
   .addField("say", "Say command will say what you want to say xd")
-  .addField("set-prefix", "Sets bots prefix. (needs to be set every update due to hosting. & can be used by admins)")
+  .addField("set", "```prefix <prefix> \nreports <channel>```")
   .addField("report-bug", "Reports bug to the support server")
   .addField("icon", "Shows server icon for 5 seconds.")
   .addField("support", "Gives invite to support server.")
