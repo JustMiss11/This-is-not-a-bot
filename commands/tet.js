@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (server, message, args) => {
-      message.channel.send("Hmmmm wanna edit this to `hemmmm`?").then(msg => {
-            message.react('👍').then(() => message.react('👎'));
+      let agr = args.join(" ");
+      message.channel.send("Hmmmm wanna edit this to `hemmmm` " + agr).then(msg => {
+            msg.react('👍').then(() => msg.react('👎'));
 
             const filter = (reaction, user) => {
                  return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
@@ -13,7 +14,7 @@ module.exports.run = async (server, message, args) => {
 		const reaction = collected.first();
 
 		if (reaction.emoji.name === '👍') {
-      msg.edit('hemmmm');
+      msg.edit('hemmmm' + agr);
 		}
     if (reaction.emoji.name === '👎'){
 			message.reply('you reacted with a thumbs down.');
