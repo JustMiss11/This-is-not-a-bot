@@ -18,7 +18,7 @@ module.exports.run = async (server, message, args) => {
     message.channel.send(semb)
   }
   if(args[0] == "reports"){
-        var channl = args.join(" ").slice(7);
+        var channl = args.join(" ").slice(8);
         db.push(`repo_${message.guild.id}`, channl)
         if(!message.member.hasPermissions("MANAGE_SERVER")) return message.channel.send("Not enought permissions!");
         
