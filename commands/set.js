@@ -5,7 +5,7 @@ const Discord = require('discord.js'),
 module.exports.run = async (server, message, args) => {
   
   if(args[0] == "prefix"){
-    let prf = args.join(" ").slice(6);
+    let prf = args.join(" ").slice(7);
     db.push(`inv_${message.guild.id}`, prf)
     if(!prf) return message.reply("You have to type any symbol to set prefix.");
   
