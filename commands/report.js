@@ -1,4 +1,5 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js'),
+      db = require('quick.db');
 
 module.exports.run = async (server, message, args) => {
       
