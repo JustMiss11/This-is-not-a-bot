@@ -9,7 +9,7 @@ module.exports.run = async (server, message, args) => {
     db.push(`inv_${message.guild.id}`, prf)
     if(!prf) return message.reply("You have to type any symbol to set prefix.");
   
-    if(!message.member.hasPermissions("MANAGE_SERVER")) return message.channel.send("Not enought permissions!");
+    if(!message.author.hasPermissions("MANAGE_SERVER")) return message.channel.send("Not enought permissions!");
   
     var semb = new Discord.RichEmbed()
     .setAuthor("Succesful!")
