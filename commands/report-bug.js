@@ -18,7 +18,7 @@ module.exports.run = async (server, message, args) => {
     msg.react('✅').then(() => msg.react('❌'));
 
             const filter = (reaction, user) => {
-                 return ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
+                 return ['✅', '❌'].includes(reaction.emoji.name); //&& user.id === message.author.id;
             };
 
    message.awaitReactions(filter, { max: 1, time: 6000000, errors: ['time'] })
