@@ -21,7 +21,7 @@ module.exports.run = async (server, message, args) => {
                  return ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
 
-   message.awaitReactions(filter, { max: 1, time: 600000000000, errors: ['time'] })
+   message.awaitReactions(filter, { max: 1, time: 6000000, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
