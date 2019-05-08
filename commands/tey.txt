@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
       
 module.exports.run = async (server, message, args) => {
       var a1 = args.join(" ");
-      db.push(`a_${message.guild.id}`, a1}
+     // db.push(`a_${message.guild.id}`, a1}
       var a2 = args.join(" ");
 }
 
