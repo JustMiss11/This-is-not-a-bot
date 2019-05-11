@@ -11,6 +11,9 @@ module.exports.run = async (server, message, args) => {
       message.channel.send("You have enabled general answers. (example: Whyy! Cuz your mom gay!)")
       return;
    }
+   if(answ === 1){
+         if(message.content.startsWith("why") || message.content.startsWith("Why")){message.reply("Cuz ur mom gay!")}
+   }
 }
 
 module.exports.help = {
