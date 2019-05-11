@@ -3,11 +3,16 @@ const Discord = require('discord.js'),
 
 module.exports.run = async (server, message, args) => {
    if(args[0] == "enable"){
-      const answ = db.set(`answ_${message.guild.id}`, 1);
       if(answ === 1){
             message.channel.send("You already enabled this.");
             return;
       }
+      const answ = db.set(`answ_${message.guild.id}`, 1);
+      
+     // if(answ === 1){
+       //     message.channel.send("You already enabled this.");
+        //    return;
+      //}
       message.channel.send("You have enabled general answers. (example: Whyy! Cuz your mom gay!)")
       return;
    }
