@@ -6,8 +6,10 @@ module.exports.run = async (server, message, args) => {
       const answ = db.set(`answ_${message.guild.id}`, 1);
       if(answ === 1){
             message.channel.send("You already enabled this.");
+            return;
       }
       message.channel.send("You have enabled general answers. (example: Whyy! Cuz your mom gay!)")
+      return;
    }
 }
 
