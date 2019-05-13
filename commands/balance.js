@@ -9,7 +9,7 @@ module.exports.run = async (server, message, args) => {
 	if(balance === null) balance = 0;
       
       
-      var bemb = Discord.RichEmbed()
+      var bemb = new Discord.RichEmbed()
       .setAuthor("Your Balance", message.author.avatarURL)
       .setColor("0xE99C38")
       .addField("BETA", "-BETA TESTING-")
