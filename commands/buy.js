@@ -1,5 +1,5 @@
 const Discord = require('discord.js'),
-      db = requir3('quick.db');
+      db = require('quick.db');
 
 module.exports.run = async (server, message, args) => {
       let bal = db.fetch(`userBalance_${message.author.id}`);
