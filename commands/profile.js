@@ -4,7 +4,9 @@ const Discord = require('discord.js'),
 module.exports.run = async (server, message, args) => {
       
       let user = message.mentions.members.first() || message.author;
-      let badge = db.fetch(`badges_${user.id}`);
+      let hugs = await db.fetch(`hugsG_${message.author.id}`);
+      let Hugs = await db.fetch(`hugsT_${message.author.id}`);
+      let badge = await db.fetch(`badges_${user.id}`);
       var userB = await db.fetch(`userBalance_${user.id}`);
       var stat = await db.fetch(`status_${user.id}`);
       if(userB === null) userB = 0;
@@ -16,7 +18,9 @@ module.exports.run = async (server, message, args) => {
             .addField("Badges:", `<:Developer:578996439573594113> <:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
                     //  ", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status)'}`, true)
-            .addField("Balance:", `€${userB}`, true);
+            .addField("Balance:", `€${userB}`, true)
+            .addField("Hugs given:", `${hugs ? `${hugs}` : '0'}`)
+            .addField("Hugs took:", `${Hugs ? `${Hugs}` : '0'}`);
             message.channel.send(emb)
             return;
       }
@@ -27,7 +31,9 @@ module.exports.run = async (server, message, args) => {
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
                     //  ", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status)'}`, true)
-            .addField("Balance:", `€${userB}`, true);
+            .addField("Balance:", `€${userB}`, true)
+            .addField("Hugs given:", `${hugs ? `${hugs}` : '0'}`)
+            .addField("Hugs took:", `${Hugs ? `${Hugs}` : '0'}`);
             message.channel.send(emb)
             return;
       }
@@ -38,7 +44,9 @@ module.exports.run = async (server, message, args) => {
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
                     //  ", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status)'}`, true)
-            .addField("Balance:", `€${userB}`, true);
+            .addField("Balance:", `€${userB}`, true)
+            .addField("Hugs given:", `${hugs ? `${hugs}` : '0'}`)
+            .addField("Hugs took:", `${Hugs ? `${Hugs}` : '0'}`);
             message.channel.send(emb)
             return;
       }
@@ -49,7 +57,9 @@ module.exports.run = async (server, message, args) => {
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
                     //  ", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status)'}`, true)
-            .addField("Balance:", `€${userB}`, true);
+            .addField("Balance:", `€${userB}`, true)
+            .addField("Hugs given:", `${hugs ? `${hugs}` : '0'}`)
+            .addField("Hugs took:", `${Hugs ? `${Hugs}` : '0'}`);
             message.channel.send(emb)
             return;
       }
@@ -69,7 +79,9 @@ module.exports.run = async (server, message, args) => {
             .addField("Badges:", `${badge ? `${badge}` : 'You dont have any badges.'}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
                     //  ", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status)'}`, true)
-            .addField("Balance:", `€${userB}`, true);
+            .addField("Balance:", `€${userB}`, true)
+            .addField("Hugs given:", `${hugs ? `${hugs}` : '0'}`)
+            .addField("Hugs took:", `${Hugs ? `${Hugs}` : '0'}`);
             message.channel.send(emb)
             return;
       //}
