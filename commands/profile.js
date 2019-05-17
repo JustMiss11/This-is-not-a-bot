@@ -2,7 +2,7 @@ const Discord = require('discord.js'),
       db = require('quick.db');
 
 module.exports.run = async (server, message, args) => {
-      let user = message.guild.mentions.users.first() || message.author;
+      let user = message.guild.mentions.members.first() || message.author;
       var userB = await db.fetch(`userBalance_${user.id}`);
       if(userB === null) userB = 0;
       
