@@ -17,7 +17,7 @@ module.exports.run = async (server, message, args) => {
             var emb = new Discord.RichEmbed()
             .setAuthor("You'r profile")
             .setColor("BLUE")
-            .addField("Balance:", `€{userB}`);
+            .addField("Balance:", `€${userB}`);
             message.channel.send(emb)
             return;
       }
