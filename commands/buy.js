@@ -12,13 +12,14 @@ module.exports.run = async (server, message, args) => {
                }
                
                db.subtract(`userBalance_${message.author.id}`, 5000).then(i => {
-               var embed = new Discord.RichEmbed()
-               .setAuthor("Successfully bought Nitro badge!")
-               .setColor("GREEN")
-               .setDescription("Now you have Nitro Badge in your profile!");
-               message.channel.send(embed)
-               return;
-            })
+                    var embed = new Discord.RichEmbed()
+                    .setAuthor("Successfully bought Nitro badge!")
+                    .setColor("GREEN")
+                    .setDescription("Now you have Nitro Badge in your profile!");
+                     message.channel.send(embed)
+                     return;
+               })
+            }
       }
 }
 module.exports.help = {
