@@ -11,6 +11,9 @@ module.exports.run = async (server, message, args) => {
       .setColor("GREEN")
       .addField(`Hugged`, user.tag)
       .addField("Its a nice moment :)");
-      message.channel.send(emb);
+      message.channel.send(embed);
       return;
+}
+module.exports.help = {
+      "name": "hug"
 }
