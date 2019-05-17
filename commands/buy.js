@@ -12,7 +12,7 @@ module.exports.run = async (server, message, args) => {
                }else{
                
                      db.subtract(`userBalance_${message.author.id}`, 5000)
-                     db.push(`badges_€{message.author.id}`, <:nitro:578957860843814912>)
+                     db.push(`badges_€{message.author.id}`, '<:nitro:578957860843814912>')
                      var embed = new Discord.RichEmbed()
                      .setAuthor("Successfully bought Nitro badge!")
                
