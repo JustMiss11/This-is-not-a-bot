@@ -6,7 +6,10 @@ module.exports.run = async (server, message, args) => {
       if(args[0] == "badge"){
       
             if(args[1] == "nitro"){
-               if(bal <= 5000).then(message.channel.send("Not enought money to purchase this") return;
+               if(bal <= 5000){
+                     message.channel.send("Not enought money to purchase this")
+                     return;
+               }
                
                db.subtract(`userBalance_${message.author.id}`, 5000).then(i => {
                var embed = new Discord.RichEmbed()
@@ -14,7 +17,8 @@ module.exports.run = async (server, message, args) => {
                .setColor("GREEN")
                .setDescription("Now you have Nitro Badge in your profile!");
                message.channel.send(embed)
-            }
+               return;
+            })
       }
 }
 module.exports.help = {
