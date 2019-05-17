@@ -9,16 +9,17 @@ module.exports.run = async (server, message, args) => {
                if(bal <= 5000){
                      message.channel.send("Not enought money to purchase this")
                      return;
-               }
+               }else{
                
-               db.subtract(`userBalance_${message.author.id}`, 5000).then(i => {
-                    var embed = new Discord.RichEmbed()
-                    .setAuthor("Successfully bought Nitro badge!")
-                    .setColor("GREEN")
-                    .setDescription("Now you have Nitro Badge in your profile!");
+                     db.subtract(`userBalance_${message.author.id}`, 5000)
+                     var embed = new Discord.RichEmbed()
+                     .setAuthor("Successfully bought Nitro badge!")
+               
+                     .setColor("GREEN")
+                     .setDescription("Now you have Nitro Badge in your profile!");
                      message.channel.send(embed)
                      return;
-               })
+              }
             }
       }
 }
