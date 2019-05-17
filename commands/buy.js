@@ -22,7 +22,19 @@ module.exports.run = async (server, message, args) => {
                      return;
               }
             }
+            var emb = new Discord.RichEmbed()
+            .setAuthor("Badges for you to buy!")
+            .setColor("BLUE")
+            .setDescription("<:nitro:578957860843814912> - nitro\n`+buy badge nitro`\nCost: `5000`");
+            message.channel.send(emb)
+            return;
       }
+      var emb = new Discord.RichEmbed()
+      .setAuthor("Here is list of categories.")
+      .setColor("0x36393f")
+      .setDescription("__badge__ \nShows list of badges you can get.");
+      message.channel.send(emb);
+      return;
 }
 module.exports.help = {
   "name": "buy"
