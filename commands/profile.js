@@ -3,7 +3,7 @@ const Discord = require('discord.js'),
 
 module.exports.run = async (server, message, args) => {
       let user = message.guild.mentions.users.first() || message.author;
-      var userB = aeait db.fetch(`userBalance_${user.id}`);
+      var userB = await db.fetch(`userBalance_${user.id}`);
       if(userB === null) userB = 0;
       
       if(user.id = message.author.id){
