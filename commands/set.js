@@ -29,6 +29,16 @@ module.exports.run = async (server, message, args) => {
         message.channel.send(emb)
         return;
   }
+  if(args[0] == "status"){
+        var stat = args.join(" ").slice(7);
+        db.push(`status_${message.author.id}`, stat)
+        var emb = new Discord.RichEmbed()
+        .setAuthor("It was successful")
+        .setColor("GREEN")
+        .setDescription(`Your profile status wast set to: \`${stat}\`!`);
+        message.channel.send(emb)
+        return;
+  }
 }
 
 module.exports.help = {
