@@ -13,7 +13,7 @@ module.exports.run = async (server, message, args) => {
       
       if(message.author.id === "342364288310312970"){
             var emb = new Discord.RichEmbed()
-            .setAuthor("You'r profile")
+            .setAuthor("Your profile")
             .setColor("BLUE")
             .addField("Badges:", `<:Developer:578996439573594113> <:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
@@ -26,7 +26,7 @@ module.exports.run = async (server, message, args) => {
       }
       if(message.author.id === "224976332046467072"){
             var emb = new Discord.RichEmbed()
-            .setAuthor("You'r profile")
+            .setAuthor("Your profile")
             .setColor("BLUE")
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
@@ -39,7 +39,7 @@ module.exports.run = async (server, message, args) => {
       }
       if(message.author.id === "442299138655387654"){
             var emb = new Discord.RichEmbed()
-            .setAuthor("You'r profile")
+            .setAuthor("Your profile")
             .setColor("BLUE")
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
@@ -52,7 +52,7 @@ module.exports.run = async (server, message, args) => {
       }
       if(message.author.id === "522048274689949712"){
             var emb = new Discord.RichEmbed()
-            .setAuthor("You'r profile")
+            .setAuthor("Your profile")
             .setColor("BLUE")
             .addField("Badges:", `<:Administrator:578996440408391723> <:Moderator:578996439682646016> ${badge ? `${badge}` : ''}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
@@ -74,7 +74,7 @@ module.exports.run = async (server, message, args) => {
            // return;
     /*  }else{*/
             var emb = new Discord.RichEmbed()
-            .setAuthor("You'r profile")
+            .setAuthor("Your profile")
             .setColor("BLUE")
             .addField("Badges:", `${badge ? `${badge}` : 'You dont have any badges.'}`)
             .addField("Status:", `${stat ? `${stat}` : 'I dont want you to see this :) (This is default status set it by \`+set status\`)'}`, true)
