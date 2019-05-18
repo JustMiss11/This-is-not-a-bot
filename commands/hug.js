@@ -9,8 +9,8 @@ module.exports.run = async (server, message, args) => {
       var embed = new Discord.RichEmbed()
       .setAuthor(message.author.username)
       .setColor("GREEN")
-      .addField(`Hugged`, user.tag)
-      .addField("Its a nice moment :)");
+      .addField(`Hugged`, `<@{user.id}>`)
+      .addField("Its a nice moment :)", "Cuz everyone want hug!");
       message.channel.send(embed);
       return;
 }
