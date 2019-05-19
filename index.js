@@ -125,4 +125,4 @@ server.on("message", async (message, msg) => { //reload;
       //}
 })
 
-erver.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJL");
+server.login("NTcxMDA5NjIxOTE0MDI1OTk0.XMHgMg.xj6PJL");
