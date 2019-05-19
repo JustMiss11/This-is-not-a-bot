@@ -8,7 +8,7 @@ module.exports.run = async (server, message, args) => {
       message.channel.send("<a:LoadingS:579385925793087488>").then(async => {
            await message.author.send(emb);
       })
-}
+}// reload \\
 module.exports.help = {
   name: "donate"
 }
