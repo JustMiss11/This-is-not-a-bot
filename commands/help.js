@@ -14,9 +14,9 @@ module.exports.run = async (server, message, args) => {
   .addField("buy", "Buy something from our shop.")
   .addField("donate", "Donate the bot owner")
   .setDescription("`help` - Viewing.");
-  message.channel.send("<a:LoadingS:579385925793087488>").then(async => {
-    no
-  })
+ 
+  
+ 
   message.channel.send(emb)
   return;
 }
