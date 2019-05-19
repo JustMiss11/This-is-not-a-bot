@@ -6,7 +6,7 @@ module.exports.run = async (server, message, args) => {
       .addField("PayPal", "enter gmail: `redsrafter@gmail.com` Im not very active on that gmail so dont try to send there random things.")
       .setColor("BLUE");
       message.channel.send("<a:LoadingS:579385925793087488>").then(async => {
-           await message.author.send(emb);
+            message.author.send(emb);
       })
 }// reload \\ // reload 2x \\
 module.exports.help = {
