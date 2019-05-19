@@ -21,11 +21,22 @@ module.exports.run = async (server, message, args) => {
                      message.channel.send(embed)
                      return;
               }
+           // if(args[1] == "valentine"){
+                  
+          //  }
+            }
+            if(args[1] == "valentine"){
+                  var emb = new Discord.RichEmbed()
+                  .setAuthor("Valentine badge")
+                  .addField("How to get:", "Earn it when Valentine event is on")
+                  .setColor("BLUE");
+                  message.channel.send(emb)
+                  return;
             }
             var emb = new Discord.RichEmbed()
             .setAuthor("Badges for you to buy!")
             .setColor("BLUE")
-            .setDescription("<:nitro:578957860843814912> - nitro\n`+buy badge nitro`\nCost: `5000`");
+            .setDescription("<:nitro:578957860843814912> - nitro\n`+buy badge nitro`\nCost: `5000` \n<:heartbadge:579669682152538112> - valentine badge \nCost: None");
             message.channel.send(emb)
             return;
       }
