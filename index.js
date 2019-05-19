@@ -31,7 +31,7 @@ server.on("ready", () => {
       console.log(`with ${server.users.size} users`)
       console.log(`${server.user.username} is online!`)
       console.log("---------------------------------")
-      console.log("Made by JustNela (FEDE)");
+      console.log("Made by JustNela (Vanes)");
       
       let statuses = [
           `to ${server.guilds.size} servers!`, //shows in how many servers I am!
