@@ -25,7 +25,7 @@ module.exports.run = async (server, message, args) => {
                   
           //  }
             }
-            if(args[1] == "valentine"){
+            if(args[1] == "valent"){
                   var emb = new Discord.RichEmbed()
                   .setAuthor("Valentine badge")
                   .addField("How to get:", "Earn it when Valentine event is on")
